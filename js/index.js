@@ -92,3 +92,16 @@ const bottomP = document.querySelectorAll(".bottom-content .text-content p");
 bottomP[0].textContent = siteContent["main-content"]["services-content"];
 bottomP[1].textContent = siteContent["main-content"]["product-content"];
 bottomP[2].textContent = siteContent["main-content"]["vision-content"];
+
+// Contact
+const contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent.contact["contact-h4"];
+
+const contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+
+// Footer
+const footerP = document.querySelector("footer p");
+footerP.textContent = siteContent.footer.copyright;
