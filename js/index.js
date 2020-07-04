@@ -44,19 +44,39 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute("src", siteContent["nav"]["img-src"]);
+logo.setAttribute("src", siteContent.nav["img-src"]);
 
-let headerImg = document.getElementById("cta-img");
-headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
+// Images
+const headerImg = document.getElementById("cta-img");
+headerImg.setAttribute("src", siteContent.cta["img-src"]);
 
-let middleImg = document.getElementById("middle-img");
+const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-let navItems = document.querySelectorAll(".container header nav a");
+// Navigation
+const navItems = document.querySelectorAll(".container header nav a");
 console.log(navItems);
-navItems[0].textContent = siteContent["nav"]["nav-item-1"];
-navItems[1].textContent = siteContent["nav"]["nav-item-2"];
-navItems[2].textContent = siteContent["nav"]["nav-item-3"];
-navItems[3].textContent = siteContent["nav"]["nav-item-4"];
-navItems[4].textContent = siteContent["nav"]["nav-item-5"];
-navItems[5].textContent = siteContent["nav"]["nav-item-6"];
+navItems[0].textContent = siteContent.nav["nav-item-1"];
+navItems[1].textContent = siteContent.nav["nav-item-2"];
+navItems[2].textContent = siteContent.nav["nav-item-3"];
+navItems[3].textContent = siteContent.nav["nav-item-4"];
+navItems[4].textContent = siteContent.nav["nav-item-5"];
+navItems[5].textContent = siteContent.nav["nav-item-6"];
+
+// Header
+const h1 = document.querySelector("h1");
+h1.textContent = siteContent.cta.h1;
+
+const headerBtn = document.querySelector(".cta-text button");
+headerBtn.textContent = siteContent.cta.button;
+
+// Main Content Top
+const topH4 = document.querySelectorAll(".top-content .text-content h4");
+console.log(topH4);
+topH4[0].textContent = siteContent["main-content"]["features-h4"];
+topH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+const topP = document.querySelectorAll(".top-content .text-content p");
+console.log(topP);
+topP[0].textContent = siteContent["main-content"]["features-content"];
+topP[1].textContent = siteContent["main-content"]["about-content"];
