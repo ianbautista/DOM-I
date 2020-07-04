@@ -80,3 +80,15 @@ const topP = document.querySelectorAll(".top-content .text-content p");
 console.log(topP);
 topP[0].textContent = siteContent["main-content"]["features-content"];
 topP[1].textContent = siteContent["main-content"]["about-content"];
+
+// Main Content Bottom
+const bottomH4 = document.querySelectorAll(".bottom-content .text-content h4");
+console.log(bottomH4);
+bottomH4[0].textContent = siteContent["main-content"]["services-h4"];
+bottomH4[1].textContent = siteContent["main-content"]["product-h4"];
+bottomH4[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const bottomP = document.querySelectorAll(".bottom-content .text-content p");
+bottomP[0].textContent = siteContent["main-content"]["services-content"];
+bottomP[1].textContent = siteContent["main-content"]["product-content"];
+bottomP[2].textContent = siteContent["main-content"]["vision-content"];
