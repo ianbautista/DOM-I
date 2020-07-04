@@ -68,6 +68,17 @@ navItems.forEach((item) => {
 	item.style.color = "green";
 });
 
+// Adding new elements
+const navContainer = document.querySelector(".container header nav");
+const newNavItem1 = document.createElement("a");
+const newNavItem2 = document.createElement("a");
+newNavItem1.textContent = "Home";
+newNavItem2.textContent = "Invest";
+newNavItem1.style.color = "green";
+newNavItem2.style.color = "green";
+navContainer.prepend(newNavItem1);
+navContainer.appendChild(newNavItem2);
+
 // Header
 const h1 = document.querySelector("h1");
 h1.textContent = siteContent.cta.h1;
