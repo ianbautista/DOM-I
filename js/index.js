@@ -141,3 +141,10 @@ headerBtnOnHover.setAttribute("onMouseOut", "this.style.background='none'");
 // center contact elements
 const contact = document.querySelector(".contact");
 contact.style.textAlign = "center";
+
+// creating callback function to use on eventListener
+function btnAlert() {
+	alert(`Hey, the button works! I guess that's a stretch!`);
+}
+// adding eventListener
+headerBtn.setAttribute("onClick", "btnAlert()");
