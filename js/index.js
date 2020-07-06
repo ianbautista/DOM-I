@@ -81,7 +81,8 @@ navContainer.appendChild(newNavItem2);
 
 // Header
 const h1 = document.querySelector("h1");
-h1.textContent = siteContent.cta.h1;
+console.log(h1);
+h1.innerHTML = "DOM <br> Is <br> Awesome";
 
 const headerBtn = document.querySelector(".cta-text button");
 headerBtn.textContent = siteContent.cta.button;
@@ -114,7 +115,7 @@ const contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent.contact["contact-h4"];
 
 const contactP = document.querySelectorAll(".contact p");
-contactP[0].textContent = siteContent.contact.address;
+contactP[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
 contactP[1].textContent = siteContent.contact.phone;
 contactP[2].textContent = siteContent.contact.email;
 
