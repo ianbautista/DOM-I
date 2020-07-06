@@ -122,3 +122,22 @@ contactP[2].textContent = siteContent.contact.email;
 // Footer
 const footerP = document.querySelector("footer p");
 footerP.textContent = siteContent.footer.copyright;
+
+// Stretch Goals
+// Styling using styles
+h1.style.color = "#4BC3DE";
+
+const headerBtnOnHover = document.querySelector(".cta .cta-text button");
+console.log(headerBtnOnHover);
+
+// adding CSS and manipulating class of element
+// headerBtnOnHover.classList.add("funky");
+// headerBtnOnHover.style.background = "#4BC3DE";
+
+// alternative using onMouseOver and onMouseOut
+headerBtnOnHover.setAttribute("onMouseOver", "this.style.background='#4BC3DE'");
+headerBtnOnHover.setAttribute("onMouseOut", "this.style.background='none'");
+
+// center contact elements
+const contact = document.querySelector(".contact");
+contact.style.textAlign = "center";
