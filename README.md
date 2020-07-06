@@ -21,9 +21,9 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps for completing your project.**
 
-- [] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your project manager as a reviewer on the pull-request
-- [ ] Your project manager will count the project as complete by merging the branch back into `main` branch.
+- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
+- [x] Add your project manager as a reviewer on the pull-request
+- [x] Your project manager will count the project as complete by merging the branch back into `main` branch.
 
 ## Task 1: Create selectors to point your data into elements
 
@@ -45,7 +45,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 ## Stretch Goals
 
 - [x] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.
-- [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button. You could build a similar data object with new values to help you test the click event.
+- [x] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button. You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer
 
