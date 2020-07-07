@@ -3,42 +3,48 @@ const secondOnes = document.querySelector("#secondOnes");
 const msHundreds = document.querySelector("#msHundreds");
 const msTens = document.querySelector("#msTens");
 
-let secondTensNum = 0;
-let secondOnesNum = 0;
-let msHundredsNum = 0;
-let msTensNum = 0;
+let secondTensTime = 0;
+let secondOnesTime = 0;
+let msHundredsTime = 0;
+let msTensTime = 0;
 
-let baseTime = 0;
+const digits = document.querySelector(".digits");
 
-// secondTens.textContent = secondTensNum;
-// secondOnes.textContent = secondOnesNum;
-// msHundreds.textContent = msHundredsNum;
-// msTens.textContent = msTensNum;
+const startTime = function () {
+	secondTens.textContent = secondTensTime;
+	secondOnes.textContent = secondOnesTime;
+	msHundreds.textContent = msHundredsTime;
+	msTens.textContent = msTensTime;
 
-// const startTime = function () {
-// 	msTensNum = msTensNum + 1;
-// 	msTens.textContent = msTensNum;
-// };
-
-const addTime = function () {
-	msTensNum = msTensNum + 1;
-	msTens.textContent = msTensNum;
-	if (msTensNum == 9) {
-		msHundredsNum = msHundredsNum + 1;
-		msHundreds.textContent = msHundredsNum;
-		if (msHundredsNum == 9) {
-			secondOnesNum = secondOnesNum + 1;
-			secondOnes.textContent = secondOnesNum;
-			if (secondOnesNum == 9) {
-				secondTensNum = secondTensNum + 1;
-				secondTens.textContent = secondTensNum;
+	if (secondTensTime < 1) {
+		if (secondOnesTime <= 9) {
+			if (msHundredsTime < 9) {
+				if (msTensTime < 9) {
+					msTensTime++;
+					msTens.innerHTML = msTensTime;
+				} else {
+					msHundredsTime++;
+					msTensTime = 0;
+					msTens.innerHTML = msTensTime;
+					msHundreds.innerHTML = msHundredsTime;
+				}
+			} else {
+				msHundredsTime = 0;
+				secondOnesTime++;
+				secondOnes.innerHTML = secondOnesTime;
 			}
+		} else {
+			secondOnesTime = 0;
+			secondTensTime++;
+			secondTens.innerHTML = secondTensTime;
+			digits.style.color = "red";
 		}
 	}
 };
 
-const countdown = function () {
-	window.setInterval(addTime(), 10);
+const countDown = function () {
+	startTime();
+	setTimeout(countDown, 10);
 };
 
-console.log(countdown());
+countDown();
