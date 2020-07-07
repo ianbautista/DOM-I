@@ -21,22 +21,22 @@ const startTime = function () {
 			if (msHundredsTime < 9) {
 				if (msTensTime < 9) {
 					msTensTime++;
-					msTens.innerHTML = msTensTime;
+					msTens.textContent = msTensTime;
 				} else {
 					msHundredsTime++;
 					msTensTime = 0;
-					msTens.innerHTML = msTensTime;
-					msHundreds.innerHTML = msHundredsTime;
+					msTens.textContent = msTensTime;
+					msHundreds.textContent = msHundredsTime;
 				}
 			} else {
 				msHundredsTime = 0;
 				secondOnesTime++;
-				secondOnes.innerHTML = secondOnesTime;
+				secondOnes.textContent = secondOnesTime;
 			}
 		} else {
 			secondOnesTime = 0;
 			secondTensTime++;
-			secondTens.innerHTML = secondTensTime;
+			secondTens.textContent = secondTensTime;
 			digits.style.color = "red";
 		}
 	}
